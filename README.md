@@ -9,7 +9,7 @@ I recently started playing Kerbal Space Program again, and i found myself wantin
  
 ### Next Up - 
   * Menu and input system
-  * Orbital period cal
+  * Orbital period calc
   * Resonant orbit delta v calc 
   * inclination change delta v calc 
 
@@ -19,5 +19,5 @@ I recently started playing Kerbal Space Program again, and i found myself wantin
   * Escape velocity calculator 
   * simple gravity assist planner 
   * phase angle calculator 
-  * mission delta V budget planner bassed on caluclated values 
+  * mission delta V budget planner bassed on calcuclated values 
 
