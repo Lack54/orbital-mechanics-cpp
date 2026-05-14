@@ -8,7 +8,7 @@ struct CelestialBody {
 };
 
 
-constexpr double G = 6.674e-11;
+constexpr double G = 6.674e-11; 
 
 // Earth
 constexpr CelestialBody Earth {
