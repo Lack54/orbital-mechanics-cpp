@@ -1,12 +1,6 @@
 #pragma once 
 #include <cmath>
-
-struct CelestialBody {
-  double radius;
-  double mass;
-  double mu;
-};
-
+#include "structs.h"
 
 constexpr double G = 6.674e-11; 
 

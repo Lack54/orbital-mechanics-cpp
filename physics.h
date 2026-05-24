@@ -5,34 +5,12 @@
 #include <cmath>
 #include <string>
 #include <algorithm>
-#include "bodies.h"
 #include <numbers>
 
+#include "orbitalElements.h"
+#include "bodies.h"
+#include "structs.h"
 
-double semiMajorAxis_calc(double r1, double r2, [[maybe_unused]] const CelestialBody& body){
-  // set the apoapsis and periapsis relative to 
-  // the center of Kerbin
-
-  // calculate semi major axis average distance between r1, r2
-  return (r1+r2) / 2.0;
-}
-
-double semiMinorAxis_calc(double a, double e){
-  double b { a*std::sqrt(1-std::pow(e,2)) };
-  return b;
-}
-double eccentricity_calc(double r1, double r2){
-  double e { (r1 - r2) / (r1+r2) };
-  return e;  
-}
-
-double orbitalPeriod_calc(double a,const CelestialBody & body){
-  double pi { std::numbers::pi };
-  double t { 2*pi * (std::sqrt(std::pow(a,3) * body.mu)) };
-    
-  return t;
-
-}
 double findOrbitalVelocityAtAltitude(double a, double altitude, const CelestialBody& body, bool isCircular){
   
   //calculate velocity at a given altitude
