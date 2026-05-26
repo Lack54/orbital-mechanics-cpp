@@ -26,6 +26,18 @@ double eccentricity_calc(double r1, double r2){
   return (r1 - r2) / (r1+r2);
 }
 
+vec3 angularMomentumVector_calc(vec3 positionVector, vec3 velocityVector)
+{
+
+  vec3 angularVector {
+
+    (positionVector.y * velocityVector.z) - (positionVector.z * velocityVector.y),
+    (positionVector.z * velocityVector.x) - (positionVector.x * velocityVector.z),
+    (positionVector.x * velocityVector.y) - (positionVector.y * velocityVector.x),
+
+  };
+  return angularVector;
+}
 double trueAnomaly_calc(double e, double a, double current_radius){
   // semi latus rectum 
   double p { a * (1 - e * e ) };
