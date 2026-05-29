@@ -33,11 +33,25 @@ vec3 angularMomentumVector_calc(vec3 positionVector, vec3 velocityVector)
 
     (positionVector.y * velocityVector.z) - (positionVector.z * velocityVector.y),
     (positionVector.z * velocityVector.x) - (positionVector.x * velocityVector.z),
-    (positionVector.x * velocityVector.y) - (positionVector.y * velocityVector.x),
+    (positionVector.x * velocityVector.y) - (positionVector.y * velocityVector.x)
 
   };
   return angularVector;
 }
+
+double inclination_calc(vec3 hVector){
+  // might need to square these total mag = sqrt hx2 + hy2 + hz2
+  double magH {std::sqrt(
+
+      pow(hVector.x,2) +
+      pow(hVector.y,2) + 
+      pow(hVector.z,2)
+      )};
+  double inclination_radians {std::acos(hVector.z / magH)};
+  double inclination_degrees {inclination_radians * (180 / std::numbers::pi)};
+  return inclination_degrees; 
+}
+
 double trueAnomaly_calc(double e, double a, double current_radius){
   // semi latus rectum 
   double p { a * (1 - e * e ) };
