@@ -33,5 +33,6 @@ int main(){
 
  // double dV = circularizeOrbit_Calc(a, r1, r2, body);
  // std::cout << '\n' << "test inclination change dv to 60 degrees = " << pureOrbitalPlaneRotationCalc(r1, 60, a, body, true);
+  std::cin.get(); 
   return 0;
 }
